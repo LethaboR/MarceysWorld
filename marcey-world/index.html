@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Marcey's World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pixelify+Sans:wght@500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- rough-edge filter used by the MySpace-style panels -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+        </filter>
+    </svg>
+
+    <!-- BACKGROUND: swirly flourishes -->
+    <svg class="swirls" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke-linecap="round">
+            <path class="s-light" stroke-width="9" d="M -20 700 C 150 650 200 450 120 330 C 60 240 150 160 230 210 C 290 250 260 330 205 320 C 170 312 168 270 195 265" />
+            <path class="s-mid" stroke-width="5" d="M -30 620 C 90 600 140 520 110 450 C 90 400 40 400 30 440" />
+            <path class="s-light" stroke-width="8" d="M 1220 40 C 1050 60 980 200 1060 290 C 1120 350 1030 420 960 380 C 910 350 930 290 975 300" />
+            <path class="s-mid" stroke-width="4" d="M 1230 130 C 1130 120 1100 190 1140 230 C 1170 255 1200 230 1185 210" />
+            <path class="s-light" stroke-width="10" d="M 1230 780 C 1050 760 900 700 880 590 C 865 510 950 470 990 520 C 1020 560 985 600 950 585" />
+            <path class="s-mid" stroke-width="5" d="M 1000 810 C 1000 740 1060 700 1120 720" />
+            <path class="s-light" stroke-width="7" d="M 40 -10 C 140 60 330 40 400 130 C 450 195 400 260 340 240 C 295 225 305 175 345 180" />
+            <path class="s-mid" stroke-width="4" d="M 420 -10 C 470 40 560 30 590 80 C 610 115 575 140 550 125" />
+            <path class="s-light" stroke-width="6" d="M 600 820 C 560 700 620 620 700 600 C 770 582 810 640 770 680 C 745 702 710 685 722 660" />
+        </g>
+        <g class="s-fill">
+            <path d="M 150 330 C 100 300 80 250 110 210 C 150 240 170 290 150 330 Z" />
+            <path d="M 1060 290 C 1010 270 990 230 1010 190 C 1050 210 1075 250 1060 290 Z" />
+            <path d="M 990 520 C 950 480 940 440 965 410 C 1000 440 1010 480 990 520 Z" />
+            <path d="M 400 130 C 370 90 380 55 410 40 C 430 75 430 105 400 130 Z" />
+            <circle cx="215" cy="262" r="9" />
+            <circle cx="978" cy="298" r="8" />
+            <circle cx="948" cy="582" r="10" />
+            <circle cx="345" cy="180" r="7" />
+            <circle cx="722" cy="658" r="7" />
+        </g>
+    </svg>
+
+    <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+    <!-- MOON (secret) -->
+    <div class="moon" data-secret="moon" role="button" tabindex="0" aria-label="The moon, tap to find a secret">
+        <div class="moonGlow"></div>
+        <div class="moonSurface">
+            <span class="crater crater1"></span>
+            <span class="crater crater2"></span>
+            <span class="crater crater3"></span>
+            <span class="crater crater4"></span>
+        </div>
+    </div>
+
+    <!-- FLOWERS (secrets) -->
+    <div class="flowers">
+        <div class="lily lily1" data-secret="message1" role="button" tabindex="0" aria-label="A flower, tap to find a secret"><span>✿</span></div>
+        <div class="lily lily2" data-secret="message2" role="button" tabindex="0" aria-label="A flower, tap to find a secret"><span>✿</span></div>
+        <div class="lily lily3" data-secret="message3" role="button" tabindex="0" aria-label="A flower, tap to find a secret"><span>✿</span></div>
+        <div class="lily lily4" data-secret="message4" role="button" tabindex="0" aria-label="A flower, tap to find a secret"><span>✿</span></div>
+    </div>
+
+    <main class="website">
+
+        <!-- HEADER -->
+        <header class="header">
+            <p class="welcome">✿ welcome to ✿</p>
+            <h1>Marcey's World</h1>
+            <p class="subtitle">a little corner of the universe</p>
+        </header>
+
+        <div class="layout">
+
+            <!-- LEFT COLUMN -->
+            <aside class="sidebar">
+
+                <section class="panel profile">
+                    <h2 class="panel-title">♡ Marcey ♡</h2>
+
+                    <div class="profile-picture">
+                        <img src="images/marcey.jpg" alt="Marcey">
+                    </div>
+
+                    <p class="online">● currently online</p>
+
+                    <div class="profile-details">
+                        <p><strong>mood:</strong> dreamy and sensitive ☁️</p>
+                        <p><strong>currently:</strong> studying EQMB</p>
+                        <p><strong>listening to:</strong> Champagne Coast - Blood Orange</p>
+                        <p><strong>likes:</strong> ice cream, Bubbs &amp; lilies 🌸</p>
+                    </div>
+
+                    <p class="profile-quote">
+                        "Everything stays right where you left it. Everything stays, but it still changes. Ever so slightly, daily and nightly, in little ways, when everything stays."
+                    </p>
+                </section>
+
+                <section class="panel">
+                    <h2 class="panel-title">✦ Explore Marcey's World</h2>
+                    <nav class="navigation">
+                        <button data-section="about" class="active">♡ About Me</button>
+                        <button data-section="memories">🌸 Memories</button>
+                        <button data-section="music">🎵 Music</button>
+                        <button data-section="films">🎬 Films</button>
+                        <button data-section="letter">💌 Letter</button>
+                        <button data-section="world">⭐ My World</button>
+                        <button data-section="guestbook">📖 Guestbook</button>
+                    </nav>
+                </section>
+
+            </aside>
+
+            <!-- RIGHT COLUMN -->
+            <section class="panel content">
+
+                <!-- ABOUT -->
+                <div class="page-section" id="about">
+                    <h2>♡ About Marcey ♡</h2>
+                    <p>Welcome to Marcey's little corner of the internet.</p>
+                    <p>This is the one place where you can find all the little unique intricacies that make Marcey MARCEY.</p>
+                </div>
+
+                <!-- MEMORIES -->
+                <div class="page-section hidden" id="memories">
+                    <h2>🌸 Memories</h2>
+
+                    <div class="memory-gallery">
+                        <div class="memory-card"><img src="images/memory1.jpg" alt="Memory 1" data-memory></div>
+                        <div class="memory-card"><img src="images/memory2.jpg" alt="Memory 2" data-memory></div>
+                        <div class="memory-card"><img src="images/memory3.jpg" alt="Memory 3" data-memory></div>
+                        <div class="memory-card"><img src="images/memory4.jpg" alt="Memory 4" data-memory></div>
+                    </div>
+
+                    <h3 class="sub-title category-title">💙 Bubbs n Me</h3>
+
+                    <!-- To add more: copy a memory-card line, put the photo in images/ and change the file name -->
+                    <div class="memory-gallery" id="bubbsGallery">
+                        <div class="memory-card"><img src="images/bubbs1.jpg" alt="Bubbs n Me 1" data-memory></div>
+                    </div>
+                </div>
+
+                <!-- MUSIC -->
+                <div class="page-section hidden" id="music">
+                    <h2>🎵 Music</h2>
+                    <p>What Marcey is listening to...</p>
+
+                    <div class="music-player">
+                        <div class="album-cover">
+                            <img src="images/champagne-coast.jpg" alt="Champagne Coast cover">
+                        </div>
+                        <p class="music-label">NOW PLAYING ♡</p>
+                        <h3>Champagne Coast</h3>
+                        <p class="artist">Blood Orange</p>
+                        <audio id="song" src="music/favorite-song.mp3"></audio>
+                        <button id="musicButton">▶ Play</button>
+                    </div>
+
+                    <div class="listening">
+                        <h3 class="sub-title">🎧 Marcey's Tracklist</h3>
+                        <p class="status" id="trackCount"></p>
+
+                        <div id="playlistEmbed" class="playlist-embed"></div>
+
+                        <ol id="tracklist" class="tracklist"></ol>
+
+                        <a class="pill-button link-button shelf-link" href="#" target="_blank" rel="noopener">See Marcey on Shelf ↗</a>
+                    </div>
+                </div>
+
+                <!-- FILMS -->
+                <div class="page-section hidden" id="films">
+                    <h2>🎬 Films</h2>
+                    <p>Recently logged on Letterboxd.</p>
+
+                    <p id="filmsStatus" class="status">Loading films...</p>
+
+                    <div id="filmStats" class="film-stats hidden">
+                        <h3 class="sub-title">✦ Diary stats</h3>
+                        <div class="stat-cards" id="statCards"></div>
+                        <div class="bars" id="ratingBars" aria-label="Rating breakdown"></div>
+                    </div>
+
+                    <div id="filmGrid" class="film-grid"></div>
+                    <a id="letterboxdLink" class="pill-button link-button" href="https://letterboxd.com/" target="_blank" rel="noopener">See everything on Letterboxd ↗</a>
+                    <a class="pill-button link-button shelf-link" href="#" target="_blank" rel="noopener">See Marcey on Shelf ↗</a>
+                </div>
+
+                <!-- LETTER -->
+                <div class="page-section hidden" id="letter">
+                    <h2>💌 A Letter</h2>
+                    <p>For Marcey...</p>
+
+                    <div class="letter">
+                        <div class="letter-paper">
+                            <p class="letter-date">somewhere in our little universe ♡</p>
+
+                            <h3>Dear Marcey,</h3>
+
+                            <p>
+                                This little corner of the internet exists because
+                                I wanted to make something that was just for you.
+                            </p>
+
+                            <p>
+                                A place where the things you love,
+                                the memories we've made, and little pieces
+                                of us could all exist together.
+                            </p>
+
+                            <p>
+                                I hope whenever you come here,
+                                it reminds you that someone out there
+                                thought you were worth building an entire
+                                little world for.
+                            </p>
+
+                            <p class="letter-heart">♡</p>
+                            <p class="letter-signature">— Mal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MY WORLD -->
+                <div class="page-section hidden" id="world">
+                    <h2>⭐ Marcey's World</h2>
+                    <p>Things Marcey loves.</p>
+
+                    <div class="likes">
+                        <span>🌸 Lilies</span>
+                        <span>🎵 GQOM</span>
+                        <span>🗺️ THE OCEAN</span>
+                        <span>🌙 Nightly movies</span>
+                    </div>
+                </div>
+
+                <!-- GUESTBOOK -->
+                <div class="page-section hidden" id="guestbook">
+                    <h2>📖 Guestbook</h2>
+                    <p>Leave a little message for this little world.</p>
+
+                    <div class="guestbook-form">
+                        <input type="text" id="guestName" placeholder="Your name..." maxlength="40">
+                        <textarea id="guestMessage" placeholder="Write something..." maxlength="500"></textarea>
+                        <input type="text" id="guestWebsite" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <button id="guestSubmit">✦ Sign the Guestbook</button>
+                    </div>
+
+                    <p id="guestStatus" class="status"></p>
+                    <div id="guestbookEntries"></div>
+
+                    <div class="guest-message pinned">
+                        <strong>Mal ♡</strong>
+                        <p>Welcome to your little world.</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <footer>
+            <p>made with ♡ for Marcey</p>
+        </footer>
+
+    </main>
+
+    <!-- MEMORY VIEWER -->
+    <div id="memoryModal" class="memory-modal">
+        <div class="memory-viewer">
+            <span class="close-memory" id="closeMemory">×</span>
+            <img id="expandedMemory" src="" alt="Expanded memory">
+        </div>
+    </div>
+
+    <!-- SECRET POPUP -->
+    <div id="secretModal" class="secret-modal">
+        <div class="secret-box">
+            <span class="close-secret" id="closeSecret">×</span>
+            <div id="secretContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
